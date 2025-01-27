@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Libros</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="container">
+    <h1 class="my-4">Lista de Libros</h1>
+    <table id="books-table" class="table table-striped">
+        <thead class="thead-dark"></thead>
+        <tr>
+            <th>LibroID</th>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Año de Publicación</th>
+            <th>Estado</th>
+        </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se llenarán los datos de los libros -->
+        </tbody>
+    </table>
+
+    <h2 class="my-4">Agregar Nuevo Libro</h2>
+    <form id="add-book-form">
+        <div class="form-group">
+            <label for="titulo">Título:</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" value="El nombre del viento" required>
+        </div>
+
+        <div class="form-group">
+            <label for="autor">Autor:</label>
+            <input type="text" class="form-control" id="autor" name="autor" value="Patrick Rothfuss" required>
+        </div>
+
+        <div class="form-group">
+            <label for="anio">Año de Publicación:</label>
+            <input type="number" class="form-control" id="anio" name="anio" value="2008" required>
+        </div>
+
+        <div class="form-group">
+            <label for="estado">Estado:</label>
+            <input type="text" class="form-control" id="estado" name="estado" value="Disponible" required>
+        </div>
+
+        <div class="form-group">
+            <label for="userid">User ID:</label>
+            <input type="number" class="form-control" id="userid" name="userid" value="100" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Agregar Libro</button>
+        <script>
+            document.getElementById('add-book-form').addEventListener('submit', () => {
+                document.getElementById('add-book-form').reset();
+            });
+        </script>
+
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="consumobooks.js"></script> <!-- El archivo JS para consumir la API -->
+</body>
+
+</html>
